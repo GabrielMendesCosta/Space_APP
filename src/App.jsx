@@ -2,7 +2,6 @@ import styled from "styled-components"
 import EstilosGlobais from "./components/EstilosGlobais"
 import Cabecalho from "./components/Cabecalho"
 import BarraLateral from "./components/BarraLateral"
-import TituloEstilizado from "./components/Banner"
 import Banner from "./components/Banner"
 import bannerBackground from '../public/imagens/background.png'
 
@@ -18,19 +17,24 @@ const AppContainer = styled.div`
   max-width: 100%;
 `
 
-function App() {
+const MainContainer = styled.main`
+  display: flex;
+  gap: 24px;
+`
 
+function App() {
   return (
     <FundoGradiente>
       <EstilosGlobais />
       <AppContainer>
         <Cabecalho />
-        <BarraLateral />
-        <TituloEstilizado />
-        <Banner
-          texto="A galeria mais completa de fotos do espaço!"
-          backgroundImage={bannerBackground}
-        />
+        <MainContainer>
+          <BarraLateral />
+          <Banner
+            texto="A galeria mais completa de fotos do espaço!"
+            backgroundImage={bannerBackground}
+          />
+        </MainContainer>
       </AppContainer>
     </FundoGradiente>
   )
