@@ -1,6 +1,11 @@
+import React from "react"
 import { styled } from "styled-components"
 
-const FigureEstilizada = styled.figure`
+interface FigureProps {
+    $backgroundImage: string;
+  }
+
+const FigureEstilizada = styled.figure<FigureProps>`
     background-image: ${props => `url(${props.$backgroundImage})`};
     flex-grow: 1;
     background-repeat: no-repeat;
@@ -22,9 +27,14 @@ const TituloEstilizado = styled.h1`
     padding: 0 64px;
 `
 
-const Banner = ({texto, backgroundImage}) => {
+interface BannerProps {
+    text: string
+    backgroundImage: string
+}
+
+const Banner = ({ text, backgroundImage }: BannerProps) => {
     return (<FigureEstilizada $backgroundImage={backgroundImage}>
-        <TituloEstilizado>{texto}</TituloEstilizado>
+        <TituloEstilizado>{text}</TituloEstilizado>
     </FigureEstilizada>)
 }
 
