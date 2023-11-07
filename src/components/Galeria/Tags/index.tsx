@@ -1,20 +1,21 @@
 import styled from 'styled-components';
 import tags from './tags.json';
+import React from 'react';
 
-const CampoTags = styled.section`
+const TagsField = styled.section`
   display: flex;
   align-items: center;
   margin: 56px 10px 39px 0;
 `;
 
-const TituloEstilizado = styled.p`
+const StylizedTitle = styled.p`
   font-size: 24px;
   color: ${'#D9D9D9'};
   margin-right: 40px;
   font-family: 'GandhiSansRegular';
 `;
 
-const TagsEstilizadas = styled.button`
+const StylizedTags = styled.button`
   font-family: 'GandhiSansRegular';
   font-size: 24px;
   font-weight: 400;
@@ -34,12 +35,12 @@ const TagsEstilizadas = styled.button`
 
 const Tags = () => {
   return (
-    <CampoTags>
-      <TituloEstilizado>Busque por tags:</TituloEstilizado>
+    <TagsField>
+      <StylizedTitle>Busque por tags:</StylizedTitle>
       {tags.map((tag) => (
-        <TagsEstilizadas key={tag.id}>{tag.titulo}</TagsEstilizadas>
+        <StylizedTags key={tag.id}>{tag.titulo}</StylizedTags>
       ))}
-    </CampoTags>
+    </TagsField>
   );
 };
 
