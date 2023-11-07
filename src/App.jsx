@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import EstilosGlobais from "./components/EstilosGlobais"
-import Cabecalho from "./components/Cabecalho"
+import HeaderR from "./components/Header"
 import SideBar from "./components/BarraLateral"
 import Banner from "./components/Banner"
 import bannerBackground from '../public/imagens/background.png'
@@ -53,7 +53,7 @@ function App() {
     <FundoGradiente>
       <EstilosGlobais />
       <AppContainer>
-        <Cabecalho />
+        <HeaderR />
         <MainContainer>
           <SideBar />
           <ConteudoGaleria>
