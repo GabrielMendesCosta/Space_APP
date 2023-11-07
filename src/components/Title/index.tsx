@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface TitleProps {
-  $alignment: string
+  $alignment?: string
 }
 
 const Title = styled.h2<TitleProps>`
