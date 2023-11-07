@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import EstilosGlobais from "./components/EstilosGlobais"
 import Cabecalho from "./components/Cabecalho"
-import BarraLateral from "./components/BarraLateral"
+import SideBar from "./components/BarraLateral"
 import Banner from "./components/Banner"
 import bannerBackground from '../public/imagens/background.png'
 import Galeria from "./components/Galeria"
@@ -55,7 +55,7 @@ function App() {
       <AppContainer>
         <Cabecalho />
         <MainContainer>
-          <BarraLateral />
+          <SideBar />
           <ConteudoGaleria>
             <Banner
               texto="A galeria mais completa de fotos do espaço!"
