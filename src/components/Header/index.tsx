@@ -1,5 +1,5 @@
 import { styled } from 'styled-components';
-import CampoTexto from '../CampoTexto';
+import TextField from '../TextField';
 import React from 'react';
 
 const HeaderEstilizado = styled.header`
@@ -15,7 +15,7 @@ const HeaderR = () => {
   return (
     <HeaderEstilizado>
       <img src="imagens/logo.png" />
-      <CampoTexto />
+      <TextField />
     </HeaderEstilizado>
   );
 };
