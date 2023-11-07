@@ -1,19 +1,20 @@
 import styled from 'styled-components';
-import Titulo from '../../Titulo';
+import Title from '../../Title';
 import fotos from './fotos-populares.json';
+import React from 'react';
 
-const ColunaFotos = styled.section`
+const PhotosColumn = styled.section`
   display: flex;
   flex-direction: column;
   gap: 16px;
 `;
 
-const Imagem = styled.img`
+const Image = styled.img`
   max-width: 212px;
   border-radius: 20px;
 `;
 
-const Botao = styled.button`
+const Button = styled.button`
   background-color: transparent;
   color: #fff;
   border: 2px solid;
@@ -26,18 +27,18 @@ const Botao = styled.button`
   margin-top: 16px;
 `;
 
-const Populares = () => {
+const Popular = () => {
   return (
     <section>
-      <Titulo $alinhamento="center">Populares</Titulo>
-      <ColunaFotos>
+      <Title $alignment="center">Populares</Title>
+      <PhotosColumn>
         {fotos.map((foto) => (
-          <Imagem key={foto.id} src={foto.path} alt={foto.alt} />
+          <Image key={foto.id} src={foto.path} alt={foto.alt} />
         ))}
-      </ColunaFotos>
-      <Botao>Ver mais</Botao>
+      </PhotosColumn>
+      <Button>Ver mais</Button>
     </section>
   );
 };
 
-export default Populares;
+export default Popular;
