@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import BotaoIcone from '../../BotaoIcone';
+import ButtonIcon from '../../ButtonIcon';
 
 const Figure = styled.figure`
   width: ${(props) => (props.$expandida ? '90%' : '460px')};
@@ -54,16 +54,16 @@ const Imagem = ({
         <h3>{foto.titulo}</h3>
         <Rodape>
           <h4>{foto.fonte}</h4>
-          <BotaoIcone onClick={() => aoAlternarFavorito(foto)}>
+          <ButtonIcon onClick={() => aoAlternarFavorito(foto)}>
             <img src={iconeFavorito} alt="Icone de favorito" />
-          </BotaoIcone>
+          </ButtonIcon>
           {!expandida && (
-            <BotaoIcone
+            <ButtonIcon
               aria-hidden={expandida}
               onClick={() => aoZoomSolicitado(foto)}
             >
               <img src="/icones/expandir.png" alt="Icone de expandir" />
-            </BotaoIcone>
+            </ButtonIcon>
           )}
         </Rodape>
       </figcaption>
